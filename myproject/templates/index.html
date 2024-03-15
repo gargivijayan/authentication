@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../static/css/styles1.css">
+
+    </head>
+
+
+    <body class="grad1">
+<div style="display:block; padding-left: 600px; padding-top: 130px; ">
+    {% if user.is_authenticated %}
+    <div class="card p-5">
+    <h2>Welcome, {{ user.username }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>First Name: {{ user.first_name }}</p>
+    <p>Last Name: {{ user.last_name }}</p>
+    <p>Phone: {{ user.phonenumber.phone_number }}</p>
+    <a href="{% url 'logout' %}">LOGOUT</a>
+    </div>
+
+{% else %}
+<h2>Login</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Login</button>
+</form>
+
+{% endif %}
+</div>
+
+</body>
+</html>
+
+
+
+
+

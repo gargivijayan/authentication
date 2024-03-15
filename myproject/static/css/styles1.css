@@ -1,0 +1,16 @@
+h2{
+    color:white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+a{
+    color:red;
+    
+}
+.grad1{
+    background-image: linear-gradient(rgb(51, 40, 202), rgb(65, 144, 168), rgb(13, 21, 27));
+}
